@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload=function(){
+				if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+        function (position) {  
+            var longitude = position.coords.longitude;  
+            var latitude = position.coords.latitude;  
+            console.log(longitude+'aa')
+            console.log(latitude+'bb')
+            },
+            function (e) {
+             var msg = e.code;
+             var dd = e.message;
+             console.log(msg+'cc')
+             console.log(dd+'dd')
+        }
+      ) 
+   }
+			}
+		</script>
+	</body>
+</html>
